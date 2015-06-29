@@ -16,7 +16,7 @@ import rog.rochlitz.salmed.objects.Patient;
 
 public class AbrechnungGenerator {
 	// TODO readers static
-
+// run param home/aroc/workspace/salmed/SalmedDMRZAbrechung/LieferscheineMai2015.csv /home/aroc/workspace/salmed/SalmedDMRZAbrechung/Patienten-export-17.csv /home/aroc/workspace/salmed/SalmedDMRZAbrechung/artikel.csv
 	public static void main(String[] args) {
 
 		LieferscheinReader l = new LieferscheinReader();
@@ -44,7 +44,7 @@ public class AbrechnungGenerator {
 			}
 
 			//TODO mehrer lieferscheine pro patient kann vorkommen > mergen
-			// TODO mehrere boxen können gleiche artikel enthalten > mergen eine position
+			// TODO mehrere boxen k��nnen gleiche artikel enthalten > mergen eine position
 			List<Artikel> artikelList = getArtikel(a.getArtikels(),
 					liefer.getArtikelID());
 
@@ -118,7 +118,7 @@ public class AbrechnungGenerator {
 	private static final String NEW_LINE_SEPARATOR = "\n";
 	
 	//CSV file header
-	private static final String FILE_HEADER = "Belegnummer;Belegdatum;F_lligkeit;Verordnungs Datum;Genehigungs Datum;Genehmigt durch;Genehmigungs Kennzeichen;Versicherter ID;Versicherter Vorname;Versicherter Nachname;Versicherter Strasse;Versicherter PLZ;Versicherter Ort;Versicherter Geb. Datum;Versicherten Nummer;Versicherungs Status;Kassen IK;Vertragsarzt Nummer;Verordner Vorname;Verordner Name;Verordner Strasse;Verordner PLZ;Verordner Ort;Rechnungs Positions ID;Liefertermin;Versorgung Ab;Versorgung Bis;Hilfsmittel Kennzeichen;Inventar Nummer;Menge;Einzelpreis;MwSt. %;Zuzahlungs Ident.-Nr.;Zuzahlungsbetrag;Betrag Eigenanteil;Artikel ID;Abrg. Pos. Nr. ;Artikel Beschreibung;GMG Kategorie;Artikel Kurzbeschreibung;Verordner Betriebsst_ttennummer;Verordnung Unfallkennzeichen;Abholort Strasse/Notfallort;Abholort PLZ;Abholort Name;Zielort Strasse;Zielort PLZ;Zielort Name;Freifeld;Freifeld;Indikations- SchlÙssel;Verordnungsart;Gefahrene km;RezeptgebÙhr;Tarifkennzeichen;Sammelrechungs nummer;Abrechungscode;DiagnoseschlÙssel 1;Diagnosetext 1;DiagnoseschlÙssel 2;Diagnosetext 2;DiagnoseschlÙssel 3;Diagnosetext 3;DiagnoseschlÙssel 4 ;Diagnosetext 4;SchlÙssel Diagnose 5 ;Diagnosetext 5;GenehmigungsArt ;Herkunft ;Organisations- einheit (OE) ;Pflegestufe ;PEA ";
+	private static final String FILE_HEADER = "Belegnummer;Belegdatum;F_lligkeit;Verordnungs Datum;Genehigungs Datum;Genehmigt durch;Genehmigungs Kennzeichen;Versicherter ID;Versicherter Vorname;Versicherter Nachname;Versicherter Strasse;Versicherter PLZ;Versicherter Ort;Versicherter Geb. Datum;Versicherten Nummer;Versicherungs Status;Kassen IK;Vertragsarzt Nummer;Verordner Vorname;Verordner Name;Verordner Strasse;Verordner PLZ;Verordner Ort;Rechnungs Positions ID;Liefertermin;Versorgung Ab;Versorgung Bis;Hilfsmittel Kennzeichen;Inventar Nummer;Menge;Einzelpreis;MwSt. %;Zuzahlungs Ident.-Nr.;Zuzahlungsbetrag;Betrag Eigenanteil;Artikel ID;Abrg. Pos. Nr. ;Artikel Beschreibung;GMG Kategorie;Artikel Kurzbeschreibung;Verordner Betriebsst_ttennummer;Verordnung Unfallkennzeichen;Abholort Strasse/Notfallort;Abholort PLZ;Abholort Name;Zielort Strasse;Zielort PLZ;Zielort Name;Freifeld;Freifeld;Indikations- Schl��ssel;Verordnungsart;Gefahrene km;Rezeptgeb��hr;Tarifkennzeichen;Sammelrechungs nummer;Abrechungscode;Diagnoseschl��ssel 1;Diagnosetext 1;Diagnoseschl��ssel 2;Diagnosetext 2;Diagnoseschl��ssel 3;Diagnosetext 3;Diagnoseschl��ssel 4 ;Diagnosetext 4;Schl��ssel Diagnose 5 ;Diagnosetext 5;GenehmigungsArt ;Herkunft ;Organisations- einheit (OE) ;Pflegestufe ;PEA ";
 
 	public static void print(List<Abrechnung> abr) {
 		 
